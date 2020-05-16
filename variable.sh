@@ -1,6 +1,6 @@
 #/bin/bash
 
-v1
-v2
-v3
-v4
+v1 = test1
+v2 = test2
+v3 = test3
+v4 = test4
