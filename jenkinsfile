@@ -1,0 +1,17 @@
+pipeline {
+   agent any
+   stages {
+      stage('git checkout') {
+         steps {
+            git 'https://github.com/shaikshareefmastan/jenkinspro.git'
+         }
+       }
+      stage('Build application') {
+         steps {
+            def  id's = readFile 'variable'       
+                      echo "${id's}"
+            
+         }
+      }
+   }
+}
