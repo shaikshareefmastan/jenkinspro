@@ -10,23 +10,12 @@ pipeline {
          steps {
            script{
                 
-               def cmd = readFile 'variable' 
-                     for (i in [ "${cmd}" ]) {
-                       test = "$i"
-             }
-                writeFile file: 'steps.groovy', text: test
+               load "variable"
+               echo "$v1"
+               echo "$v2"
               }
             }
            }
                 
-        stage('printenv') {
-            steps {
-               script {
-                    load "/var/lib/jenkins/workspace/pipeline/steps.groovy"
-                    echo "${v1}"
-                    echo "${v2}"
-               }
-          }
-      }
     }
  }
