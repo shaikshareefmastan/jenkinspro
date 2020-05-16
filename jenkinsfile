@@ -13,6 +13,7 @@ pipeline {
                def cmd = readFile 'variable' 
                      for (i in [ "${cmd}" ]) {
                        test = "$i"
+                        echo "$i"  
              }
                 writeFile file: 'steps.groovy', text: test      
             }
