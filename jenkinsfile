@@ -9,8 +9,11 @@ pipeline {
       stage('Build application') {
          steps {
            script{
-               def  varibles = readFile 'variable'       
-                      sh  "echo ${variables}"
+                
+               def cmd = readFile 'variable' 
+                     for (i in [ '${cmd}' ]) {
+                          "echo $i"
+               }      
             }
             
          }
