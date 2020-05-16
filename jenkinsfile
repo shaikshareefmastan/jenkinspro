@@ -11,8 +11,8 @@ pipeline {
            script{
                 
                load "variable"
-               echo "$v1"
-               echo "$v2"
+               echo "${v1}"
+               echo "${v2}"
               }
             }
            }
