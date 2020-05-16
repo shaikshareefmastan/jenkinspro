@@ -16,8 +16,8 @@ pipeline {
              }
                 writeFile file: 'steps.groovy', text: test
                 load "steps.groovy"
-                echo "${v1}"
-                echo "${v2}" 
+                echo "${env.v1}"
+                echo "${env.v2}" 
            } 
          }
       }
