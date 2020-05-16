@@ -18,7 +18,7 @@ pipeline {
                 load "steps.groovy"
                 echo "${v1}"
                 echo "${v2}" 
-            
+           } 
          }
       }
    }
