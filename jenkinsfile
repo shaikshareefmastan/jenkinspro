@@ -23,8 +23,8 @@ pipeline {
             steps {
                script {
                     load "/var/lib/jenkins/workspace/pipeline/steps.groovy"
-                    echo "${env.v1}"
-                    echo "${env.v2}"
+                    echo "${v1}"
+                    echo "${v2}"
                }
           }
       }
