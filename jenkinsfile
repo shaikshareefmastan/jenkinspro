@@ -15,17 +15,16 @@ pipeline {
                        test = "$i"
              }
                 writeFile file: 'steps.groovy', text: test
-      stage('printenv') {
-         steps {
-           script {  
-                load "/var/lib/jenkins/workspace/pipeline/steps.groovy"
-                echo "${env.v1}"
-                echo "${env.v2}"
-                }
-               } 
-             }
-           } 
-         }
-      }
-   }
-}
+              }
+            }
+           }
+                
+        stage('printenv') {
+            steps {
+               script {
+                    load "/var/lib/jenkins/workspace/pipeline/steps.groovy"
+                    echo "${env.v1}"
+                    echo "${env.v2}"
+               }
+          }
+     }
