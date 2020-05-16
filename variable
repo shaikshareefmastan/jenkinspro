@@ -1,4 +1,4 @@
-env.v1 = test1
-env.v2 = test2
-env.v3 = test3
-env.v4 = test4
+def env.v1 = test1
+def env.v2 = test2
+def env.v3 = test3
+def env.v4 = test4
