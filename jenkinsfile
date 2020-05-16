@@ -8,8 +8,8 @@ pipeline {
        }
       stage('Build application') {
          steps {
-            def  id's = readFile 'variable'       
-                      echo "${id's}"
+            def  varibles = readFile 'variable'       
+                      echo "${variables}"
             
          }
       }
