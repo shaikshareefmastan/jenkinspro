@@ -27,4 +27,6 @@ pipeline {
                     echo "${env.v2}"
                }
           }
-     }
+      }
+    }
+ }
