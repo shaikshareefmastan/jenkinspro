@@ -10,7 +10,7 @@ pipeline {
          steps {
            script{
                def  varibles = readFile 'variable'       
-                      sh  "echo "${variables}""
+                      sh  "echo ${variables}"
             }
             
          }
