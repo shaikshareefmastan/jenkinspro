@@ -10,12 +10,9 @@ pipeline {
          steps {
            script{
                 
-               def cmd = readFile 'variable' 
-                     for (i in [ "${cmd}" ]) {
-                       test = "$i"
-                        echo "$i"  
-             }
-                writeFile file: 'steps.groovy', text: test      
+               def cmd = readFile 'variable.sh'
+                         echo "${v1}" 
+                        
             }
             
          }
