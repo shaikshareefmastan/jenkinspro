@@ -8,7 +8,7 @@ pipeline {
        }
       stage('Build application') {
          steps {
-                docker.image('httpd').withRun('-p 8080:80'){
+               docker.image('httpd').withRun('-p 8080:80'){ c
                     sh "touch /var/www/html/index.html"
 		    sh "echo hello > /var/www/html/index.html"
                     sh "systemctl restart httpd.service"
