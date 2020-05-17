@@ -1,0 +1,25 @@
+#########################################
+#read file content and using forloop for each line and create new file
+pipeline {
+   agent any
+   stages {
+      stage('git checkout') {
+         steps {
+            git 'https://github.com/shaikshareefmastan/jenkinspro.git'
+         }
+       }
+      stage('Build application') {
+         steps {
+           script{
+                
+               def cmd = readFile 'variable' 
+                     for (i in [ "${cmd}" ]) {
+                       test = "$i"
+             }
+                writeFile file: 'steps.groovy', text: test      
+            }
+            
+         }
+      }
+   }
+}
