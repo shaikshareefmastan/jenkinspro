@@ -23,3 +23,28 @@ pipeline {
       }
    }
 }
+
+#########################################
+# load file content and print varibles in files
+pipeline {
+   agent any
+   stages {
+      stage('git checkout') {
+         steps {
+            git 'https://github.com/shaikshareefmastan/jenkinspro.git'
+         }
+       }
+      stage('Build application') {
+         steps {
+           script{
+
+               load "variable"
+               echo "${v1}"
+               echo "${v2}"
+              }
+            }
+           }
+
+    }
+ }
+#################################################

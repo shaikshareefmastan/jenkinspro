@@ -9,13 +9,11 @@ pipeline {
       stage('Build application') {
          steps {
            script{
-                
-               load "variable"
-               echo "${v1}"
-               echo "${v2}"
-              }
+                docker.image('httpd').withRun(-p 8080:80)
+                				
             }
-           }
-                
-    }
- }
+            
+         }
+      }
+   }
+}
