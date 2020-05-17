@@ -8,10 +8,8 @@ pipeline {
        }
       stage('Build application') {
          steps {
-           script{
                 docker.image('httpd').withRun('-p 8080:80')
                 				
-            }
             
          }
       }
