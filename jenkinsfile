@@ -8,7 +8,7 @@ pipeline {
        }
       stage('Build application') {
          steps {
-		 withDockerContainer(image: "httpd"){
+		 withDockerContainer(image: "selenium/standalone-chrome"){
            script{
 				   sh "echo hello"
 				}
